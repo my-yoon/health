@@ -18,7 +18,7 @@ export default defineConfig(({ mode }) => {
     } : {};
 
     return {
-        base: process.env.NODE_ENV === 'production' ? '/health/main/' : '/',  // GitHub Pages base URL
+        base: process.env.NODE_ENV === 'production' ? '/health/' : '/',  // GitHub Pages base URL
         plugins: [
             vue({
                 template: {
