@@ -18,6 +18,7 @@ export default defineConfig(({ mode }) => {
     } : {};
 
     return {
+        base: '/health/',  // GitHub Pages base URL
         plugins: [
             vue({
                 template: {
@@ -32,7 +33,6 @@ export default defineConfig(({ mode }) => {
                 }
             }),
             ckeditor5({ theme: require.resolve('@ckeditor/ckeditor5-theme-lark') })
-
         ],
         resolve: {
             alias: {
