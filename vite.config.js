@@ -18,7 +18,6 @@ export default defineConfig(({ mode }) => {
     } : {};
 
     return {
-        base: process.env.NODE_ENV === 'production' ? '/health/' : '/',  // 상대 경로로 변경
         plugins: [
             vue({
                 template: {
@@ -33,6 +32,7 @@ export default defineConfig(({ mode }) => {
                 }
             }),
             ckeditor5({ theme: require.resolve('@ckeditor/ckeditor5-theme-lark') })
+
         ],
         resolve: {
             alias: {
@@ -49,15 +49,7 @@ export default defineConfig(({ mode }) => {
                 }
             }
         },
-        build: {
-            ..._buildOptions,
-            assetsDir: 'assets',
-            rollupOptions: {
-              output: {
-                manualChunks: undefined
-              }
-            }
-          },
+        build: _buildOptions
     };
 });
 
