@@ -18,7 +18,7 @@ export default defineConfig(({ mode }) => {
     } : {};
 
     return {
-        base: '/health/',  // GitHub Pages base URL
+        base: process.env.NODE_ENV === 'production' ? '/health/' : '/',  // 상대 경로로 변경
         plugins: [
             vue({
                 template: {
@@ -49,7 +49,15 @@ export default defineConfig(({ mode }) => {
                 }
             }
         },
-        build: _buildOptions
+        build: {
+            ..._buildOptions,
+            assetsDir: 'assets',
+            rollupOptions: {
+              output: {
+                manualChunks: undefined
+              }
+            }
+          },
     };
 });
 
