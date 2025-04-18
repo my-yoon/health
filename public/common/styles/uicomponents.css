@@ -1,0 +1,149 @@
+#modals {
+    position: relative;
+    z-index: 999;
+}
+
+.modalLayer {
+
+    width: 500px;
+    background: #fff
+}
+
+.treegroup li {
+    position: relative;
+    font-size: 14px;
+}
+
+
+.treegroup ul {
+    position: relative;
+    padding-left: 40px;
+    height: auto;
+    transition: height .3s;
+    transform: translate3d(0, 0px, 0);
+}
+
+.treegroup ul.hidden {
+    height: 0;
+    overflow: auto;
+}
+
+.treegroup ul:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 15px;
+    width: 10px;
+    height: 100%;
+    border-left: 1px dotted #222
+}
+
+.treegroup span {
+    cursor: pointer;
+}
+
+.treegroup li:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: -23px;
+    width: 10px;
+    height: 1px;
+    border-bottom: 1px dotted #222
+}
+
+.treegroup .treeTitle {
+    display: block;
+    padding-left: 10px
+}
+
+/* 모션 */
+.treegroup ul li {
+    transition: .2s;
+    opacity: 1;
+    transform: translate3d(0, 0px, 0);
+}
+
+.treegroup ul.hidden>li {
+    opacity: 0;
+    transform: translate3d(0, -15px, 0);
+}
+
+.treegroup ul li:nth-of-type(1) {
+    transition-delay: .1s;
+}
+
+.treegroup ul li:nth-of-type(2) {
+    transition-delay: .15s;
+}
+
+.treegroup ul li:nth-of-type(3) {
+    transition-delay: .2s;
+}
+
+.treegroup ul li:nth-of-type(4) {
+    transition-delay: .25s;
+}
+
+.treegroup ul li:nth-of-type(5) {
+    transition-delay: .3s;
+}
+
+.editor_container i {
+    font-style: italic;
+}
+
+.ck-editor i {
+    font-style: italic;
+}
+
+.editor_container li {
+    list-style: revert;
+}
+
+.editor_container * {
+    padding: revert;
+}
+
+.edit_con * {
+    padding: revert;
+}
+
+.edit_con li {
+    list-style: revert;
+}
+
+.ck.ck-logo {
+    display: none;
+}
+
+input[type="number"] {
+    -webkit-apperance: none;
+    apperance: none;
+    -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-apperance: none;
+    apperance: none;
+    -moz-appearance: textfield;
+    margin: 0
+}
+
+/* .ag-body-horizontal-scroll-viewport {
+    display: none
+} */
+
+.ui-dragdrop-item {
+    margin-top: -1px
+}
+
+.ui-dragdrop-item:hover,
+.isDragging>.ui-dragdrop-item {
+    border-color: #ffbc00;
+    box-shadow: 0 2px 8px 0px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
