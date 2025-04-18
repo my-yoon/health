@@ -1,6 +1,6 @@
 <template>
     <div class="ui-dashboard">
-     확ㄴ인
+     확ㄴ인햣 
         <div class="ui-dashboard-summary-wrap">
             <div class="ui-dashboard-summary">
                 <div class="ui-dashboard-summary-head">
