@@ -47,7 +47,7 @@ window.$api = request;
 const app = createApp(App);
 app.use(dayjs);
 app.use(router);
-app.use(ChartJS);
+// app.use(ChartJS);
 app.use(i18n);
 app.use(store);
 app.use(Draggable);
