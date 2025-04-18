@@ -1,10 +1,10 @@
 <template>
     <div class="ui-dashboard">
-     확ㄴ인햣 
+    
         <div class="ui-dashboard-summary-wrap">
             <div class="ui-dashboard-summary">
                 <div class="ui-dashboard-summary-head">
-                    <h2>CS / 업무승인</h2>
+                    <h2>CS / 업무승인111</h2>
                 </div>
                 <div class="ui-dashboard-summary-list">
                     <div class="ui-dashboard-summary-item alarm"><!-- 건수 1개이상 class 'alarm' 적용 -->
