@@ -131,7 +131,7 @@
             </div>
             <div class="ui-dashboard-item">
                 <div class="ui-dashboard-item-head">
-                    <h2>Seller 운영현황</h2>
+                    <h2>Seller 운영현황 1111</h2>
                     <button type="button" class="btn-direct-link"><span class="offscreen">Seller 운영현황 바로가기</span></button>
                 </div>
                 <div class="ui-dashboard-item-cont">
@@ -141,7 +141,7 @@
                                 <div class="dashboard-item-sub-head">
                                     <h3>1:1문의 답변대기 현황</h3>
                                     <div class="abs">
-                                        답변대기 <a href="#" class="num-link">1건</a>
+                                        답변대기 <a href="#" class="num-link">10건</a>
                                     </div>
                                 </div>
                                 <div class="dashboard-item-sub-cont">
