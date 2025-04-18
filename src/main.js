@@ -31,6 +31,7 @@ import SearchBtns from '@/components/ui/SearchBtns.vue';
 import ToolTip from '@/components/ui/ToolTip.vue';
 
 /** chart */
+import { Chart as ChartJS } from 'chart.js/auto';
 import { Bubble, Bar, Line } from 'vue-chartjs';
 
 /** @moment */
@@ -46,7 +47,7 @@ window.$api = request;
 const app = createApp(App);
 app.use(dayjs);
 app.use(router);
-app.use(Bubble, Bar, Line);
+app.use(ChartJS);
 app.use(i18n);
 app.use(store);
 app.use(Draggable);

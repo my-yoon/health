@@ -412,11 +412,11 @@ export default {
             }
         };
         arr = [
-            {wrname:'업무요청 포탈1', startdate:2014-09-01, enddate:2014-09-30, wrstate:inprogess},
-            {wrname:'업무요청 포탈2', startdate:2014-09-15, enddate:2014-09-20, wrstate:end},
-            {wrname:'업무요청 포탈3', startdate:2014-09-20, enddate:2014-09-30, wrstate:inprogess},
-            {wrname:'업무요청 포탈4', startdate:2014-09-30, enddate:2014-09-30, wrstate:inprogess},
-        ]
+            {wrname: '업무요청 포탈1', startdate: '2014-09-01', enddate: '2014-09-30', wrstate: 'inprogess'},
+            {wrname: '업무요청 포탈2', startdate: '2014-09-15', enddate: '2014-09-20', wrstate: 'end'},
+            {wrname: '업무요청 포탈3', startdate: '2014-09-20', enddate: '2014-09-30', wrstate: 'inprogess'},
+            {wrname: '업무요청 포탈4', startdate: '2014-09-30', enddate: '2014-09-30', wrstate: 'inprogess'}
+        ];
         //삭제 컨펌
         const listDel = () => {
             if (state.delList.length === 0) {

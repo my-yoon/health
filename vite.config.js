@@ -6,7 +6,7 @@ import ckeditor5 from '@ckeditor/vite-plugin-ckeditor5';
 const require = createRequire(import.meta.url);
 
 export default defineConfig(({ mode }) => {
-    const _buildOptions = (mode === 'prod') ? {
+    const _buildOptions = (mode === 'production') ? {
         sourcemap: true,
         minify: 'terser',
         terserOptions: {
@@ -18,6 +18,7 @@ export default defineConfig(({ mode }) => {
     } : {};
 
     return {
+        base: process.env.NODE_ENV === 'production' ? '/health/' : '/',
         plugins: [
             vue({
                 template: {
@@ -32,7 +33,6 @@ export default defineConfig(({ mode }) => {
                 }
             }),
             ckeditor5({ theme: require.resolve('@ckeditor/ckeditor5-theme-lark') })
-
         ],
         resolve: {
             alias: {
@@ -40,6 +40,8 @@ export default defineConfig(({ mode }) => {
             }
         },
         server: {
+            port: 8080,
+            host: true,
             proxy: {
                 '/api': {
                     target: 'https://dev-api-adm.kb-ocare.co.kr',
@@ -49,7 +51,18 @@ export default defineConfig(({ mode }) => {
                 }
             }
         },
-        build: _buildOptions
+        build: {
+            ..._buildOptions,
+            assetsDir: 'assets',
+            rollupOptions: {
+                output: {
+                    manualChunks: undefined
+                }
+            }
+        },
+        esbuild: {
+            logOverride: { 'this-is-undefined-in-esm': 'silent' }
+        }
     };
 });
 

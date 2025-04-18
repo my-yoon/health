@@ -417,9 +417,9 @@ export default {
             state.validState.errState = false; // validation
             state.validState.message = '';
         };
-        const query = state.word.slice(lastAtindex+1).trim()
-        const name = query.replace(parttern, '')
-        state.userList = state.relatedList
+        const query = state.word.slice(lastAtindex + 1).trim();
+        const name = query.replace(parttern, '');
+        state.userList = state.relatedList;
 
         // @validate
         const validCheck = (type) => {
@@ -451,14 +451,14 @@ export default {
         const checkValidState = (type) => {
             return state.validState.target === type && state.validState.errState;
         };
-        const eventChck = (event, index, tagname){
-            if(event.key==arrowdown){
-                state.tagname=tagname
-            }else{
-                state.tagname=tagname
+        const eventChck = (event, index, tagname) => {
+            if (event.key == arrowdown) {
+                state.tagname = tagname;
+            } else {
+                state.tagname = tagname;
             }
-            return false
-        }
+            return false;
+        };
         return {
             //공통 사용
             $Modal,
