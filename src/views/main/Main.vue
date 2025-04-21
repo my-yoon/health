@@ -1,6 +1,7 @@
 <template>
     <div>
-        <!-- {{ userInfo }} -->
+        <!-- {{ userInfo }} --> 1111
+        
         <div class="tbl-wrap" v-if="state.userInfo">
             <table class="table reg" style="width:100%;">
                 <colgroup>
